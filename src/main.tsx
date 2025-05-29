@@ -1,5 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router";
 
 const root = document.querySelector('#root');
 
@@ -7,4 +11,15 @@ if (!root) {
   throw new Error('Unable to find `root` node.');
 }
 
-createRoot(root).render(<StrictMode>Test</StrictMode>);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div>Hello World</div>,
+  },
+]);
+
+createRoot(root).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>
+);
