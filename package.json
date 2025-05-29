@@ -1,10 +1,17 @@
 {
   "name": "todo-list",
-  "module": "index.ts",
+  "module": "index.html",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "vite"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@latest"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "vite": "npm:rolldown-vite@latest"
   },
   "peerDependencies": {
     "typescript": "^5"
