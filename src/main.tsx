@@ -7,8 +7,4 @@ if (!root) {
   throw new Error('Unable to find `root` node.');
 }
 
-createRoot(root).render(
-  <StrictMode>
-    Test
-  </StrictMode>,
-);
+createRoot(root).render(<StrictMode>Test</StrictMode>);
