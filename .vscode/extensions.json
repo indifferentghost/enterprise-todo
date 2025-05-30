@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "million.million-lint",
+    "biomejs.biome",
+    "bradlc.vscode-tailwindcss"
+  ]
+}

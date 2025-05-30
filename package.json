@@ -17,6 +17,7 @@
     "react-router": "^7.6.1"
   },
   "devDependencies": {
+    "@million/lint": "^1.0.14",
     "@biomejs/biome": "1.9.4",
     "@types/bun": "latest",
     "@types/react": "^19.1.6",

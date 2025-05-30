@@ -43,5 +43,8 @@
     "clientKind": "git",
     "useIgnoreFile": true,
     "defaultBranch": "main"
+  },
+  "files": {
+    "ignore": ["bun.lock"]
   }
 }
