@@ -1,11 +1,21 @@
 import MillionLint from '@million/lint';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-oxc';
 import { defineConfig } from 'vite';
+import biomePlugin from 'vite-plugin-biome';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [MillionLint.vite({
-    enabled: true,
-    telemetry: false,
-  }), react()],
+  plugins: [
+    react({
+      include: './src/*',
+    }),
+    MillionLint.vite({
+      enabled: true,
+      telemetry: false,
+    }),
+    biomePlugin({
+      mode: 'check',
+      applyFixes: true,
+    }),
+  ],
 });

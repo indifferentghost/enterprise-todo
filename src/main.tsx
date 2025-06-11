@@ -1,9 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router";
+import { RouterProvider, createBrowserRouter } from 'react-router';
 
 const root = document.querySelector('#root');
 
@@ -13,7 +10,7 @@ if (!root) {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <div>Hello World</div>,
   },
 ]);
@@ -21,5 +18,5 @@ const router = createBrowserRouter([
 createRoot(root).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

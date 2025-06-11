@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode development",
     "lint:fix": "biome check --write",
     "test": "vitest"
   },
@@ -14,19 +14,20 @@
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.6.1"
+    "react-router": "^7.6.2"
   },
   "devDependencies": {
-    "@million/lint": "^1.0.14",
     "@biomejs/biome": "1.9.4",
+    "@million/lint": "^1.0.14",
     "@types/bun": "latest",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
-    "@vitejs/plugin-react": "^4.5.0",
+    "@types/react": "^19.1.7",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react-oxc": "^0.2.2",
     "vite": "npm:rolldown-vite@latest",
-    "vitest": "^3.1.4"
+    "vite-plugin-biome": "^1.0.12",
+    "vitest": "^3.2.3"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.8.3"
   }
 }
