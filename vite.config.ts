@@ -1,4 +1,6 @@
+import path from 'node:path';
 import MillionLint from '@million/lint';
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-oxc';
 import { defineConfig } from 'vite';
 import biomePlugin from 'vite-plugin-biome';
@@ -9,6 +11,7 @@ export default defineConfig({
     react({
       include: './src/*',
     }),
+    tailwindcss(),
     MillionLint.vite({
       enabled: true,
       telemetry: false,
@@ -18,4 +21,9 @@ export default defineConfig({
       applyFixes: true,
     }),
   ],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
 });
