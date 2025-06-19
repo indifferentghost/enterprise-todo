@@ -10,7 +10,15 @@ export default defineConfig({
   plugins: [
     MillionLint.vite({
       enabled: true,
+      /**
+       * `telemetry` is still trying to connect to posthog
+       * https://github.com/aidenybai/million/issues/1178
+       */
       telemetry: false,
+      dev: process.env.NODE_ENV === 'development' ? 'debug' : false,
+      turbo: false,
+      react: '19',
+      lite: process.env.NODE_ENV !== 'development',
     }),
     react({
       include: './src/**/*.{ts,tsx}',
