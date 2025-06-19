@@ -1,6 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router';
+import { ModeToggle } from './components/mode-toggle';
+import { ThemeProvider } from './components/theme-provider';
 
 const root = document.querySelector('#root');
 
@@ -17,6 +19,9 @@ const router = createBrowserRouter([
 
 createRoot(root).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <ModeToggle />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );

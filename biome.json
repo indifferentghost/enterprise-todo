@@ -7,7 +7,12 @@
     "lineEnding": "lf"
   },
   "linter": {
-    "enabled": true
+    "enabled": true,
+    "rules": {
+      "style": {
+        "useBlockStatements": "error"
+      }
+    }
   },
   "javascript": {
     "formatter": {

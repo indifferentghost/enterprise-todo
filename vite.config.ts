@@ -8,19 +8,22 @@ import biomePlugin from 'vite-plugin-biome';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react({
-      include: './src/*',
-    }),
-    tailwindcss(),
     MillionLint.vite({
       enabled: true,
       telemetry: false,
     }),
+    react({
+      include: './src/**/*.{ts,tsx}',
+    }),
+    tailwindcss(),
     biomePlugin({
       mode: 'check',
       applyFixes: true,
     }),
   ],
+  css: {
+    transformer: 'lightningcss',
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
