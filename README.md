@@ -12,13 +12,6 @@ To run this project in development mode:
 bun run dev
 ```
 
-To format code:
-
-```sh
-bun run lint:fix
-```
-There's vite biome plugin added which should automagically format code.
-
 To run tests:
 
 ```sh
